@@ -1,0 +1,47 @@
+# API de gestion des utilisateurs et transactions financières
+
+Cette API permet à des utilisateurs de gerer leurs transactions financières. Elle est sécurisée avec un mécanisme d'authentification JWT (JSON Web Token).
+
+## Installation
+
+1. Clonez ce dépôt :
+
+    git clone https://votre-lien-github.com/nom-du-repository.git
+
+2. Installez les dépendances :
+
+    npm install
+
+3. Créez un fichier `.env` à la racine du projet avec la clé `JWT_SECRET` :
+
+    JWT_SECRET=your_secret_key
+
+4. Démarrez le serveur :
+
+    npm start
+
+Le serveur sera accessible sur `http://localhost:5000`.
+
+## Securité de l'Api
+
+1. Utilisation de bibliothèque helmet et xss-clean pour protéger ton API pour les failles XSS et ajouter le middleware.
+
+2. Utilisation de express-mongo-sanitize() qui empêche l’injection en supprimant les clés contenant $, {} ou . qui pourraient manipuler la base de données
+
+3. Uitlisation de bibiliotheque crsf pour  les vulnerabilités CSRF.
+
+## Optimisation des requetes de l'Api
+
+1. Utiliser des index sur les champs fréquemment recherchés
+
+2. Utiliser les programation asynchrone 
+
+3. Pagination et limit() pour éviter les charges inutiles
+
+## Collection Postman
+
+Pour tester l'API avec Postman, vous pouvez importer la collection Postman via ce lien :
+
+🔗 [Importer la collection Postman](https://www.postman.com/collections/TON_ID_DE_COLLECTION)
+
+
